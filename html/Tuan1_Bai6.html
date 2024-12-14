@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson Electronics Registration Form</title>
+    <style>
+        /* Đặt nền xanh cho toàn trang */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #87CEFA;
+            /* Màu xanh giống hình */
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        /* Khung chứa form */
+        
+        .container {
+            width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #BFDFFF;
+            /* Màu nền cho khung form */
+            border: 2px solid #000;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        }
+        /* Tiêu đề logo */
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #00CED1;
+            /* Màu xanh nhạt cho header */
+            border: 2px solid #000;
+            padding: 10px;
+        }
+        
+        h2 {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        /* Nhãn và ô nhập liệu */
+        
+        label {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            vertical-align: top;
+        }
+        
+        input,
+        select,
+        textarea {
+            width: 200px;
+            margin-bottom: 10px;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+        }
+        
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+        
+        .inline {
+            display: inline-block;
+            width: 60px;
+        }
+        
+        .radio-group,
+        .checkbox-group {
+            margin-bottom: 10px;
+        }
+        
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 10px;
+        }
+        /* Nút bấm */
+        
+        .buttons {
+            text-align: center;
+        }
+        
+        button {
+            padding: 8px 15px;
+            background-color: #D3D3D3;
+            border: 1px solid #000;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        button:hover {
+            background-color: #A9A9A9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="header">
+            <h1>Jackson<br>Electronics</h1>
+        </div>
+
+        <!-- Tiêu đề chính -->
+        <h2>Registration Form</h2>
+        <p style="text-align: center;">Register your Jackson Electronics product here</p>
+
+        <!-- Form bắt đầu -->
+        <form>
+            <!-- Thông tin cá nhân -->
+            <label>First Name:</label>
+            <input type="text" name="firstname">
+            <label class="inline">Last Name:</label>
+            <input type="text" name="lastname"><br>
+
+            <label>Address #1:</label>
+            <input type="text" name="address1"><br>
+            <label>Address #2:</label>
+            <input type="text" name="address2"><br>
+            <label>City:</label>
+            <input type="text" name="city">
+            <label class="inline">State:</label>
+            <input type="text" name="state" style="width: 60px;">
+            <label class="inline">Zip:</label>
+            <input type="text" name="zip" style="width: 80px;"><br>
+
+            <label>Country:</label>
+            <select name="country">
+                <option>United States</option>
+                <option>Canada</option>
+                <option>Mexico</option>
+            </select><br>
+
+            <!-- Thông tin sản phẩm -->
+            <label>Product:</label>
+            <select name="product">
+                <option>ScanMaster</option>
+                <option>Printer</option>
+                <option>Monitor</option>
+            </select><br>
+            <label>Date Purchased:</label>
+            <input type="date" name="purchasedate"><br>
+            <label>Serial #:</label>
+            <input type="text" name="serial"><br>
+
+            <!-- Sử dụng cho mục đích -->
+            <label>Used for:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="usedfor" value="home"> Home</label>
+                <label><input type="radio" name="usedfor" value="business"> Business</label>
+                <label><input type="radio" name="usedfor" value="government"> Government</label>
+                <label><input type="radio" name="usedfor" value="education"> Educational Institution</label>
+                <label><input type="radio" name="usedfor" value="other"> Other</label>
+            </div>
+
+            <!-- Hệ điều hành -->
+            <label>System:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="system" value="windows"> Windows</label>
+                <label><input type="checkbox" name="system" value="macintosh"> Macintosh</label>
+                <label><input type="checkbox" name="system" value="unix"> UNIX</label>
+                <label><input type="checkbox" name="system" value="other"> Other</label>
+            </div>
+
+            <!-- Bình luận -->
+            <label>Comments?:</label>
+            <textarea name="comments"></textarea><br>
+
+            <!-- Nút bấm -->
+            <div class="buttons">
+                <button type="submit">Click to register</button>
+                <button type="reset">Click to cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
